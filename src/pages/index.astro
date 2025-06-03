@@ -3,24 +3,61 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Picture } from 'astro:assets';
+import sunflowers from '../assets/sunflowers-HansLinde.jpg'
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.home {
+				overflow: hidden;
+				position: relative;
+			}
+			.home-image {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background-color: var(--green-light);
+				color: var(--cream);
+				height: 30%;
+				width: 60%;
+				border-radius: 30px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}	
+			
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Hogar Coporal</h1>
-			<h2>Psic. Leonor Brenes Mesa</h2>
+			<div class="home">
+				<Picture 
+					src={sunflowers} 
+					formats={['avif', 'webp']} 
+					alt="Sunflowers by Hans Linde" 
+					widths={[240, 540, 720, sunflowers.width]}
+					sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${sunflowers.width}px`}/>
+				<div class="home-image">
+					<h1 class="hogar-corporal">Hogar Coporal</h1>
+					<p>Psic. Leonor Brenes Mesa</p>
+				</div>
+			</div>
+
 			<h1>"Sanar desde el cuerpo, habitar desde el cuidado."</h1>
-			<p>Este es un espacio creado para <b>acompañarte en el proceso de reconectar contigo misma/o, con tu cuerpo y con tus vínculos</b>, desde una mirada compasiva y respetuosa.</p>
-			<p>En Hogar Corpral te ofrezco un acompañamiento terapéutico basado en la psicoterapia integrativa y el Yoga Sensible al Trauma (TCTSY), donde la seguridad, la elección y el cuidado son fundamentales.</p>
-			<p>Tal vez no siempre hay palabras para lo vivido, pero sí hay <b>caminos para volver al cuerpo, cultivar presencia y construir formas más amables de habitarte</b>. Aquí puedes pausar, respirar y explorar lo que necesites, a tu propio ritmo.</p>
-			<p>Eres bienvenida/o a comenzar este camino, desde el cuerpo, el vínculo y la presencia.</p>
-			<p>🌿 <b>Te doy la bienvenida a este hogar</b>.</p>
+			<div>
+				<p>Este es un espacio creado para <b>acompañarte en el proceso de reconectar contigo misma/o, con tu cuerpo y con tus vínculos</b>, desde una mirada compasiva y respetuosa.</p>
+				<p>En Hogar Corpral te ofrezco un acompañamiento terapéutico basado en la psicoterapia integrativa y el Yoga Sensible al Trauma (TCTSY), donde la seguridad, la elección y el cuidado son fundamentales.</p>
+				<p>Tal vez no siempre hay palabras para lo vivido, pero sí hay <b>caminos para volver al cuerpo, cultivar presencia y construir formas más amables de habitarte</b>. Aquí puedes pausar, respirar y explorar lo que necesites, a tu propio ritmo.</p>
+				<p>Eres bienvenida/o a comenzar este camino, desde el cuerpo, el vínculo y la presencia.</p>
+				<p>🌿 <b>Te doy la bienvenida a este hogar</b>.</p>
+			</div>
 			<h1>Formas de acompañar</h1>
 		</main>
 		<Footer />
