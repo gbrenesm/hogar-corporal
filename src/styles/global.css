@@ -27,12 +27,14 @@ body {
 	overflow-wrap: break-word;
 	font-size: 25px;
 	line-height: 1.7;
+	color: var(--green);
 }
-/* main {
+main {
 	max-width: calc(100% - 3em);
 	margin: auto;
-	padding: 3em 1em;
-} */
+	padding: 2em 1em;
+}
+
 h1,
 h2,
 h3,
@@ -40,7 +42,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Sue Ellen Francisco', cursive;
-	margin: 0 0 0.5rem 0;
+	margin: 3rem 0;
 	line-height: 1.2;
 }
 h1 {
@@ -80,28 +82,7 @@ table {
 	width: 100%;
 }
 
-code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
-}
-pre {
-	padding: 1.5em;
-	border-radius: 8px;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border-left: 4px solid var(--accent);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
-}
-hr {
-	border: none;
-	border-top: 1px solid rgb(var(--gray-light));
-}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
@@ -114,6 +95,10 @@ hr {
 .hogar-corporal {
 	font-family: 'Style Script', cursive;
 	font-size: 4em;
+}
+
+.flex-image {
+	display: flex;
 }
 
 .sr-only {
