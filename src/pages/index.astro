@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Picture } from 'astro:assets';
 import sunflowers from '../assets/sunflowers-HansLinde.jpg'
+import group from '../assets/home.png'
 ---
 
 <!doctype html>
@@ -15,7 +16,11 @@ import sunflowers from '../assets/sunflowers-HansLinde.jpg'
 			.home {
 				overflow: hidden;
 				position: relative;
-				border-radius: 50px;
+
+				img {
+					border-radius: 50px;
+					width: 100%;
+				}
 			}
 			.home-image {
 				position: absolute;
@@ -26,22 +31,46 @@ import sunflowers from '../assets/sunflowers-HansLinde.jpg'
 				color: var(--cream);
 				height: 30%;
 				width: 60%;
-				border-radius: 30px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				border-radius: 50px;
 
 				p {
 					font-size: 1.8em;
 				}
 			}
 
-			.circle {
-				clip-path: circle(50px);
-				background-color: var(--green);
+			
+			.image-in-circle {
+				position: relative;
+				width: 45%;
+				img {
+					position: absolute;
+					width: 100%;
+					height: 90%;
+					top: 55%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
 			}
 			
+			.circle {
+				position: absolute;
+				background-color: var(--green);
+				/* width: 200px;
+				height: 200px; */
+				border-radius: 50%;
+				top: 55%;
+				left: 40%;
+				transform: translate(-50%, -50%);
+			}
+
+			.text-with-image {
+				width: 50%;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -62,15 +91,20 @@ import sunflowers from '../assets/sunflowers-HansLinde.jpg'
 
 			<h1>"Sanar desde el cuerpo, habitar desde el cuidado."</h1>
 			<div class="flex-image">
-				<div>
+				<div class="text-with-image">
 					<p>Este es un espacio creado para <b>acompañarte en el proceso de reconectar contigo misma/o, con tu cuerpo y con tus vínculos</b>, desde una mirada compasiva y respetuosa.</p>
 					<p>En Hogar Corpral te ofrezco un acompañamiento terapéutico basado en la psicoterapia integrativa y el Yoga Sensible al Trauma (TCTSY), donde la seguridad, la elección y el cuidado son fundamentales.</p>
 					<p>Tal vez no siempre hay palabras para lo vivido, pero sí hay <b>caminos para volver al cuerpo, cultivar presencia y construir formas más amables de habitarte</b>. Aquí puedes pausar, respirar y explorar lo que necesites, a tu propio ritmo.</p>
 					<p>Eres bienvenida/o a comenzar este camino, desde el cuerpo, el vínculo y la presencia.</p>
 					<p>🌿 <b>Te doy la bienvenida a este hogar</b>.</p>
 				</div>
-				<div class="circle">
-
+				<div class="image-in-circle">
+					<div class="circle"/>
+					<Picture
+						src={group}
+						alt="Ilustración de grupo de terapia"
+						formats={['avif', 'webp']}
+						/>
 				</div>
 			</div>
 			<h1>Formas de acompañar</h1>

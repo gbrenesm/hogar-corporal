@@ -32,7 +32,7 @@ body {
 main {
 	max-width: calc(100% - 3em);
 	margin: auto;
-	padding: 2em 1em;
+	padding: 2em 4em;
 }
 
 h1,
@@ -67,6 +67,7 @@ b {
 }
 p {
 	margin-bottom: 1em;
+	text-align: justify;
 }
 .prose p {
 	margin-bottom: 2em;
@@ -99,6 +100,7 @@ table {
 
 .flex-image {
 	display: flex;
+	width: 100%;
 }
 
 .sr-only {
