@@ -58,6 +58,6 @@
 
 .cards-display {
   display: flex;
-  height: 50vh;
+  height: 60vh;
   justify-content: space-around;
 }

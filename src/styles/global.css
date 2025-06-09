@@ -76,6 +76,7 @@ b {
 p {
 	margin-bottom: 1em;
 	text-align: justify;
+	display: block;
 }
 
 textarea {
