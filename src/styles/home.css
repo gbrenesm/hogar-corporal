@@ -56,10 +56,6 @@
 	transform: translate(-50%, -50%);
 }
 
-.text-with-image {
-	width: 50%;
-}
-
 .cards-display {
   display: flex;
   height: 50vh;

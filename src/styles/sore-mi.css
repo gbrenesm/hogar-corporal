@@ -1,0 +1,48 @@
+
+/* Style for first image in page */
+.image-principal {
+  position: relative;
+	width: 45%;
+  
+  .rectangle-green {
+    position: absolute;
+    background-color: var(--green);
+    width: 65%;
+    height: 85%;
+    border-radius: 30px;
+    top: 10%;
+    left: 10%;
+  }
+
+	img {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+	}
+}
+
+/* Style for second image in page */
+.image-secondary {
+  width: 50%;
+  position: relative;
+  
+  .rectangle-orange {
+    background-color: var(--orange);
+    width: 65%;
+    height: 85%;
+    border-radius: 30px;
+  }
+
+  img {
+    width: 65%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+}

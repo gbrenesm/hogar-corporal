@@ -29,6 +29,7 @@ body {
 	line-height: 1.7;
 	color: var(--green);
 }
+
 main {
 	max-width: calc(100% - 3em);
 	margin: auto;
@@ -45,33 +46,38 @@ h6 {
 	margin: 3rem 0;
 	line-height: 1.2;
 }
+
 h1 {
 	font-size: 2.8em;
 	text-align: center;
 }
+
 h2 {
 	font-size: 2.4em;
 }
+
 h3 {
 	font-size: 1.953em;
 }
+
 h4 {
 	font-size: 1.563em;
 }
+
 h5 {
 	font-size: 1.25em;
 }
+
 strong,
 b {
 	font-weight: 700;
 }
+
 p {
 	margin-bottom: 1em;
 	text-align: justify;
 }
-.prose p {
-	margin-bottom: 2em;
-}
+
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -87,6 +93,26 @@ a {
 	text-decoration: none;
 }
 
+img {
+	max-width: 100%;
+}
+
+
+.hogar-corporal {
+	font-family: 'Style Script', cursive;
+	font-size: 4em;
+}
+
+.flex-image {
+	display: flex;
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+.text-with-image {
+	width: 50%;
+}
+
 
 @media (max-width: 720px) {
 	body {
@@ -97,30 +123,7 @@ a {
 	}
 }
 
-.hogar-corporal {
-	font-family: 'Style Script', cursive;
-	font-size: 4em;
-}
 
-.flex-image {
-	display: flex;
-	width: 100%;
-}
-
-.sr-only {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
-	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
-	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
-	white-space: nowrap;
+.prose p {
+	margin-bottom: 2em;
 }
