@@ -4,34 +4,44 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
 	<nav>
-		<div class="internal-links">
-			<HeaderLink href="/">Hogar Corporal</HeaderLink>
-			<HeaderLink href="/sobre-mi">Sobre mí</HeaderLink>
-			<HeaderLink href="/psicoterapia">Psicoterapia</HeaderLink>
-			<HeaderLink href="/yoga-sensile">Yoga Sensible</HeaderLink>
-			<HeaderLink href="/conectemos">Conectemos</HeaderLink>
-		</div>
+		<HeaderLink href="/" class="hogar-corporal">Hogar Corporal</HeaderLink>
+		<HeaderLink href="/sobre-mi">Sobre mí</HeaderLink>
+		<HeaderLink href="/psicoterapia">Psicoterapia</HeaderLink>
+		<HeaderLink href="/yoga-sensile">Yoga Sensible</HeaderLink>
+		<HeaderLink href="/conectemos" class="conectemos">Conectemos</HeaderLink>
 	</nav>
 </header>
 <style>
 	header {
 		margin: 0;
-		padding: 0 1em;
+		padding: 0 2em;
 		background: var(--green);
 	}
+
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
+
 	nav a {
-		padding: 1em 0.5em;
+		padding: .5em 1em;
 		color: white;
-		border-bottom: 4px solid transparent;
+		border-bottom: 8px solid transparent;
+	}
+
+	nav a.active {
+		border-bottom-color: var(--orange);
 		text-decoration: none;
 	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--orange);
+
+	.hogar-corporal {
+		font-size: 1.3em;
+	}
+
+	.conectemos {
+		background-color: var(--orange);
+		color: var(--green);
+		border-radius: 30px;
 	}
 </style>
