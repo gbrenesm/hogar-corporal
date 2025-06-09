@@ -2,76 +2,18 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Card from '../components/Cards.astro';
+import '../styles/home.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Picture } from 'astro:assets';
-import sunflowers from '../assets/sunflowers-HansLinde.jpg'
-import group from '../assets/home.png'
+import sunflowers from '../assets/sunflowers-HansLinde.jpg';
+import group from '../assets/home.png';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.home {
-				overflow: hidden;
-				position: relative;
-
-				img {
-					border-radius: 50px;
-					width: 100%;
-				}
-			}
-			.home-image {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				background-color: var(--green-light);
-				color: var(--cream);
-				height: 30%;
-				width: 60%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				border-radius: 50px;
-
-				p {
-					font-size: 1.8em;
-				}
-			}
-
-			
-			.image-in-circle {
-				position: relative;
-				width: 45%;
-				img {
-					position: absolute;
-					width: 100%;
-					height: 90%;
-					top: 55%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-				}
-			}
-			
-			.circle {
-				position: absolute;
-				background-color: var(--green);
-				/* width: 200px;
-				height: 200px; */
-				border-radius: 50%;
-				top: 55%;
-				left: 40%;
-				transform: translate(-50%, -50%);
-			}
-
-			.text-with-image {
-				width: 50%;
-			}
-
-		</style>
 	</head>
 	<body>
 		<Header />
@@ -108,6 +50,29 @@ import group from '../assets/home.png'
 				</div>
 			</div>
 			<h1>Formas de acompañar</h1>
+			<div class="cards-display">
+				<Card 
+					title='Psicoterapia'
+					imagePath='/src/assets/home-sofa.jpg'
+					subtitle='Sesiones individuales'
+					altText='Ilustaricón de sofa y plantas'
+					link='/psicoterapia'
+				/>
+				<Card 
+					title='Yoga Sensible a Trauma'
+					imagePath='/src/assets/home-yogaIndividual.jpg'
+					subtitle='Sesiones grupales'
+					altText='Ilustaricón de sofa y plantas'
+					link='/yoga-sensible'
+				/>
+				<Card 
+					title='Yoga Sensible a Trauma'
+					imagePath='/src/assets/home-sesionesGrupales.jpg'
+					subtitle='Sesiones individuales'
+					altText='Ilustaricón de sofa y plantas'
+					link='/yoga-sensible'
+				/>
+			</div>
 		</main>
 		<Footer />
 	</body>
