@@ -1,0 +1,64 @@
+ul > li {
+  list-style-type: none;
+}
+
+.image-principal {
+  width: 50%;
+  position: relative;
+  
+  .rectangle-green {
+    position: absolute;
+    background-color: var(--green);
+    width: 65%;
+    height: 85%;
+    border-radius: 30px;
+    top: 18%;
+    right: 0%;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    border-radius: 30px;
+  }
+}
+
+.image-secondary {
+  width: 50%;
+  position: relative;
+  
+  .rectangle-green-ligth {
+    position: absolute;
+    background-color: var(--green-light);
+    width: 65%;
+    height: 85%;
+    border-radius: 30px;
+    top: 18%;
+    left: 0%;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 30px;
+  }
+}
+
+/* Styles for the paragraphs with background */
+.background-green {
+  background-color: var(--green-light);
+  padding: 1em;
+  color: var(--cream);
+  border-radius: 30px;
+  text-align: center;
+
+  p {
+    text-align: center;
+  }
+}

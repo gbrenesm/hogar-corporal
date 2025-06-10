@@ -2,12 +2,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/sore-mi.css';
+import '../styles/yoga.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Picture } from 'astro:assets';
-import Leonor from '../assets/FotoLeonorBrenes.jpg'
-import yoga from '../assets/sobreMi.png'
+import yoga from '../assets/yogaSensible.jpg'
 ---
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -16,51 +16,69 @@ import yoga from '../assets/sobreMi.png'
 	<body>
 		<Header />
 		<main>
+			<h1>Yoga Sensible a Trauma<h1/>
+			<h2>(TCTSY)</h2>
 			<div class="flex-image">
 				<div class="text-with-image">
-						<h1>Sobre mí<h1/>
-						<p>
-							¡Hola! Soy <b>Leonor Brenes</b>, apasionada de las personas, las plantas y el yoga. 
-							Acompaño, a través de la <b>Psicoterapia</b> y el <b>Yoga Sensible a Trauma</b>, 
-							a quienes desean reconectar con su cuerpo después de vivir experiencias de trauma.
+					<p>
+							¡Es un <b>tratamiento complementario a la psicoterapia</b> basado en el <b>movimiento y el yoga</b>. 
+							A diferencia del yoga tradicional, TCTSY no se centra en alcanzar metas físicas, 
+							se enfoca en <b>crear un espacio seguro</b> donde puedas:
 						</p>
-						<p>
-							Estudié psicología en la Universidad Intercontinental y posteriormente hice una <b>maestría 
-							en Orientación Psicológica</b> en la Universidad Iberoamericana CDMX. Además cuento con un diplomado 
-							en <b>Psicoanálisis Relacional</b> y diversos cursos en tema de psicodiagnóstico, salud mental e investigación.
-						</p>
+						<ul>
+							<li>🌱 Reconectar con tu cuerpo</li>
+							<li>🌱 Recuperar el sentido de elección</li>
+							<li>🌱 Cultivar la presencia en el aquí y ahora</li>
+							<li>🌱 Explorar el movimiento de forma segura</li>
+						</ul>
 					</div>
 					<div class="image-principal">
 						<div class="rectangle-green"/>
 						<Picture
-							src={Leonor}
-							alt="Leonor Brenes Mesa"
+							src={yoga}
+							alt="Dibujo de persona viendo una flor"
 							formats={['avif', 'webp']}
 						/>
 					</div>
 				</div>
+				<p class="background-green">
+					La metodología de TCTSY fue desarrolla por el Trauma Center y cuenta con amplia 
+					evidencia de sus beneficios para los síntomas de trauma emocional.
+				</p>
 				<div class="flex-image">
 					<div class="image-secondary">
-						<div class="rectangle-orange"/>
+						<div class="rectangle-green-ligth"/>
 						<Picture
-							src={yoga}
-							alt="Dibujo de personas haciendo yoga"
-							formats={['avif', 'webp']}
+						src={yoga}
+						alt="Dibujo de persona abrazándose a sí misma"
+						formats={['avif', 'webp']}
 						/>
 					</div>
 					<div class="text-with-image">
-						<p>Como <b>Psicoterapeuta Integrativa</b>, llevo más de 5 años dedicándome a la promoción y tratamiento de salud mental.</p>
-						<p>Soy <b>profesora a nivel universitario</b> de materias relacionadas con evaluación, prevención y salud mental.</p>
-						<p>
-							Además de mi formación en psicología, hace 12 años comencé a practicar yoga. 
-							Esta actividad me permitió acercarme a mi cuerpo y <b>conocer mi salud mental</b> desde otras perspectivas.
-						</p>
-						<p>
-							Me formé como <b>profesora en yoga hatha/vinyasa</b> (YTT 200) y más adelante como <b>facilitadora de Yoga Sensible a Trauma</b> 
-							(TCTSY-F) en el Trauma Center.
-						</p>
+						<p><b>Beneficios</b> de la práctica de TCTSY:</p>
+						<ul>
+							<li>✔️ Reduce los síntomas del trastorno de estrés postraumático (TEPT) y trauma complejo</li>
+							<li>✔️ Mejora de la regulación emocional</li>
+							<li>✔️ Aumenta la sensación de seguridad y conexión con el propio cuerpo</li>
+							<li>✔️ Potencializa la capacidad para manejar el estrés</li>
+						</ul>
 					</div>
 				</div>
+				<div class="background-green">
+					<p><b>TCTSY puede ser para ti si:</b></p>
+					<ul>
+							<li>👉🏼 Has experimentado algún trauma o experiencia traumática</li>
+							<li>👉🏼 Has pasado por enfermedades o diagnósticos que te hagan sentir que pierdes control de tu cuerpo</li>
+							<li>👉🏼 Buscas un enfoque terapéutico corporal suave y respetuoso</li>
+							<li>👉🏼 Deseas reconectar con tu cuerpo y recuperar el sentido de control</li>
+						</ul>
+				</div>
+				<h2>Diferencias a una sesión de yoga regular</h2>
+				<p>
+					La metología de TCTSY permite que las sesiones sean adaptadas a las necesidades de cada persona. 
+					Algunas de las diferencias principales que notarás serán:
+				</p>
+				<h2>Sesiones de TCTSY</h2>
 		</main>
 		<Footer />
 	</body>
