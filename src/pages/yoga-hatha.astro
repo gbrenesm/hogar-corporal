@@ -1,0 +1,56 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/yoga-hatha.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Picture } from 'astro:assets';
+import yoga from '../assets/yogaHatha.png'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Yoga Hatha / Vinyasa<h1/>
+      <div class="flex-image">
+					<div class="image-principal">
+						<div class="rectangle-green-ligth"/>
+						<Picture
+						src={yoga}
+						alt="Dibujo de persona abrazándose a sí misma"
+						formats={['avif', 'webp']}
+						/>
+					<div class="schedule">
+            <p>Grupos abiertos:</p>
+            <p>Lunes 7:30 pm (en línea)</p>
+					</div>
+					</div>
+					<div class="text-with-image">
+            <p>En estas clases de yoga combinamos la fuerza del movimiento consciente con la pausa del estar presente.</p>
+            <p>
+              A través de prácticas de Hatha y Vinyasa suaves, te invito a explorar tu respiración, 
+              tu cuerpo y tu energía desde un lugar compasivo, sin exigencias ni juicios. 
+              Combinamos posturas suaves de yoga Hatha con secuencias fluidas de Vinyasa, 
+              siempre desde un enfoque amable, no competitivo y consciente del cuerpo.
+            </p>
+            <p>
+              A diferencia del Yoga Sensible al Trauma (TCTSY), <b>estas sesiones no son un espacio terapéutico</b>, 
+              sino una <b>práctica de yoga tradicional adaptada con cuidado</b>.
+              Aquí sí encontrarás instrucciones sobre alineación, ritmo y respiración, y una estructura más clara para guiar el movimiento.
+            </p>
+            <p>
+              Son clases ideales si buscas <b>fortalecer tu cuerpo, soltar tensiones 
+              y mejorar tu flexibilidad/<b> desde la presencia, el respeto a tus límites y la curiosidad por explorar el momento a través del cuerpo.
+            </p>
+            <p>No necesitas tener experiencia previa. Aquí el movimiento se adapta a ti, no al revés.</p>
+          </div>
+				</div>
+    </main>
+		<Footer />
+	</body>
+</html>
