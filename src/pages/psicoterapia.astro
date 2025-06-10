@@ -1,0 +1,62 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/psicoterapia.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Picture } from 'astro:assets';
+import sesion from '../assets/sesionTerapia.jpg'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Psicoterapia<h1/>
+				<div class="flex-image">
+					<div class="image-principal">
+						<div class="rectangle-orange"/>
+						<Picture
+							src={sesion}
+							alt="Sesión de terapia en acuarela"
+							formats={['avif', 'webp']}
+						/>
+					</div>
+					<div class="text-with-image">
+						<p>
+							La psicoterapia es un espacio seguro para <b>explorar y comprender las emociones que a veces resultan difíciles de manejar</b>. 
+							A través de este proceso, podemos trabajar juntos en los cambios, desafíos o situaciones que surgen en las distintas etapas de la vida.
+						</p>
+						<p>
+							Como <b>psicoterapeuta integrativa</b>, adapto cada proceso a las necesidades únicas de cada persona. Para ello, 
+							<b>combino herramientas de diversos enfoques</b> terapéuticos, como la psicoterapia psicoanalítica, la terapia narrativa, 
+							las terapias cognitivas conductuales y de tercera generación, así como las terapias sistémicas.
+						</p>
+						<p>
+							Esta flexibilidad me permite ofrecer un <b>acompañamiento personalizado y efectivo</b>, siempre con <b>empatía y respeto</b> hacia tu historia.
+						</p>
+						<p>
+							Adicionalmente, trabajo con un <b>enfoque relacional</b>. Es decir que durante el proceso terapéutico, 
+							comprendo como las relaciones personales son un factor esencial que determina quiénes somos y cómo nos movemos en el mundo.
+						</p>
+					</div>
+				</div>
+				<h3>Algunos de los temas con los que trabajo son:</h3>
+				<div class="key-words">
+					<p>Depresión</p>
+					<p>Ansiedad</p>
+					<p>Duelo</p>
+					<p>Vacío</p>
+					<p>Dificultades de pareja</p>
+					<p>Trastorno de la personalidad</p>
+					<p>Trauma (TEPT y TEPT - C)</p>
+					<p>Dificultades vocacionales y profesionales</p>
+				</div>
+		</main>
+		<Footer/>
+	</body>
+</html>

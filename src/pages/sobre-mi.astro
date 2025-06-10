@@ -1,0 +1,68 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/sobre-mi.css';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Picture } from 'astro:assets';
+import Leonor from '../assets/FotoLeonorBrenes.jpg'
+import yoga from '../assets/sobreMi.png'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="flex-image">
+				<div class="text-with-image">
+						<h1>Sobre mí<h1/>
+						<p>
+							¡Hola! Soy <b>Leonor Brenes</b>, apasionada de las personas, las plantas y el yoga. 
+							Acompaño, a través de la <b>Psicoterapia</b> y el <b>Yoga Sensible a Trauma</b>, 
+							a quienes desean reconectar con su cuerpo después de vivir experiencias de trauma.
+						</p>
+						<p>
+							Estudié psicología en la Universidad Intercontinental y posteriormente hice una <b>maestría 
+							en Orientación Psicológica</b> en la Universidad Iberoamericana CDMX. Además cuento con un diplomado 
+							en <b>Psicoanálisis Relacional</b> y diversos cursos en tema de psicodiagnóstico, salud mental e investigación.
+						</p>
+					</div>
+					<div class="image-principal">
+						<div class="rectangle-green"/>
+						<Picture
+							src={Leonor}
+							alt="Leonor Brenes Mesa"
+							formats={['avif', 'webp']}
+						/>
+					</div>
+				</div>
+				<div class="flex-image">
+					<div class="image-secondary">
+						<div class="rectangle-orange"/>
+						<Picture
+							src={yoga}
+							alt="Dibujo de personas haciendo yoga"
+							formats={['avif', 'webp']}
+						/>
+					</div>
+					<div class="text-with-image">
+						<p>Como <b>Psicoterapeuta Integrativa</b>, llevo más de 5 años dedicándome a la promoción y tratamiento de salud mental.</p>
+						<p>Soy <b>profesora a nivel universitario</b> de materias relacionadas con evaluación, prevención y salud mental.</p>
+						<p>
+							Además de mi formación en psicología, hace 12 años comencé a practicar yoga. 
+							Esta actividad me permitió acercarme a mi cuerpo y <b>conocer mi salud mental</b> desde otras perspectivas.
+						</p>
+						<p>
+							Me formé como <b>profesora en yoga hatha/vinyasa</b> (YTT 200) y más adelante como <b>facilitadora de Yoga Sensible a Trauma</b> 
+							(TCTSY-F) en el Trauma Center.
+						</p>
+					</div>
+				</div>
+		</main>
+		<Footer />
+	</body>
+</html>

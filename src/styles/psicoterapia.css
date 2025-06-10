@@ -1,0 +1,40 @@
+.image-principal {
+  width: 50%;
+  position: relative;
+  
+  .rectangle-orange {
+    position: absolute;
+    background-color: var(--orange);
+    width: 65%;
+    height: 25%;
+    border-radius: 30px;
+    top: 13%;
+    left: 10%;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    border-radius: 30px;
+  }
+}
+
+.key-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  p {
+    background-color: var(--green-light);
+    color: var(--cream);
+    padding: 1.2%;
+    border-radius: 30px;
+    white-space: wrap;
+    width: 280px;
+    padding: 20px 5px;
+    text-align: center;
+  }
+}
