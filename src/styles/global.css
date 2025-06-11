@@ -1,23 +1,10 @@
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
 	--green: #384F34;
 	--orange: #F7B480;
 	--cream: #FCF3E3;
 	--green-light: #859C80;
 	--radius: 30px;
-	--tablet-min: 567px;
-	--tablet-max: 720px;
-
 }
 
 body {
@@ -121,7 +108,7 @@ img {
 }
 
 /* For tablet */
-@media (min-width: 576px) and (max-width: 720px) {
+@media (min-width: 576px) and (max-width: 768px) {
 	main {
 		max-width: calc(100% - 2em);
 	}
@@ -136,15 +123,10 @@ img {
 	h2 {
 		font-size: 2.4em;
 	}
-
-	.hamburger {
-    display: none;
-  }
-
 }
 
 /* For laptops and pc */
-@media (min-width: 721px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 	main {
 		max-width: calc(100% - 3em);
 	}
@@ -158,8 +140,8 @@ img {
 	}
 }
 
-/* For largte screens */
-@media (min-width: 993px) {
+/* For larger screens */
+@media (min-width: 1025px) {
 	main {
 		max-width: calc(100% - 3em);
 	}
@@ -173,15 +155,7 @@ img {
 	}
 }
 
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+/* Big screens */
+@media (min-width: 1201px) {
+	
 }
