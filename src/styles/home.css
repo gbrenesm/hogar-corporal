@@ -63,12 +63,12 @@
 }
 
 /* For tablet */
-@media (min-width: 576px) and (max-width: 720px) {
+@media (min-width: 576px) and (max-width: 768px) {
 
 }
 
 /* For laptops and pc */
-@media (min-width: 721px) and (max-width: 992px) {
+@media (min-width: 769px) and (max-width: 1024px) {
 	.home-image {
 		height: 50%;
 		width: 70%;
@@ -80,13 +80,25 @@
 }
 
 /* For largte screens */
-@media (min-width: 993px) {
+@media (min-width: 1025px) {
 	.home-image {
 		height: 50%;
 		width: 80%;
 		padding: 4%;
 		p {
 		font-size: 2em;
+		}
+	}
+}
+
+/* Big screens */
+@media (min-width: 1201px) {
+	.home-image {
+		height: 50%;
+		width: 80%;
+		padding: 4%;
+		p {
+		font-size: 3em;
 		}
 	}
 }

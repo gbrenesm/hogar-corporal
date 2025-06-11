@@ -1,0 +1,93 @@
+header {
+	margin: 0;
+	padding: 0 2em 1em 2em;
+	background: var(--green);
+}
+	
+.nav-links {
+  width: 100%;
+  display: none;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 5px 0;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--cream);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background-color: var(--orange);
+}
+
+.expanded {
+  display: unset;
+}
+
+/* Hamburger menu in celphone */
+.hamburger {
+  padding: 20px 0 0 0;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: var(--orange);
+  margin-bottom: 10px;
+}
+
+nav a.active {
+	border-bottom-color: var(--orange);
+	text-decoration: none;
+}
+
+.ho-menu {
+  font-size: 30px !important;
+  font-family: 'Style Script', cursive;
+}
+
+.conectemos {
+	background-color: var(--orange);
+	color: var(--green);
+	border-radius: 30px;
+  margin: 0 30px;
+}
+
+
+/* Size grater than a tablet */
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5em;
+  }
+
+  .nav-links a {
+    font-size: 1em;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .conectemos {
+    margin: 0;
+    padding: 5px 15px !important;
+  }
+}
+
+/* Big screens */
+@media (min-width: 1201px) {
+  .nav-links a {
+    font-size: 1.3em;
+  }
+
+}
