@@ -14,6 +14,9 @@
 	--orange: #F7B480;
 	--cream: #FCF3E3;
 	--green-light: #859C80;
+	--radius: 30px;
+	--tablet-min: 567px;
+	--tablet-max: 720px;
 
 }
 
@@ -23,15 +26,13 @@ body {
 	padding: 0;
 	background: var(--cream);
 	background-size: 100% 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	font-size: 25px;
+	font-size: 18px;
 	line-height: 1.7;
 	color: var(--green);
 }
 
 main {
-	max-width: calc(100% - 3em);
+	max-width: calc(100% - 1em);
 	margin: auto;
 	padding: 2em 4em;
 }
@@ -43,13 +44,11 @@ h4,
 h5,
 h6 {
 	font-family: 'Sue Ellen Francisco', cursive;
-	margin: 3rem 0;
-	line-height: 1.2;
 	text-align: center;
 }
 
 h1 {
-	font-size: 2.8em;
+	font-size: 33px;
 }
 
 h2 {
@@ -58,14 +57,6 @@ h2 {
 
 h3 {
 	font-size: 1.953em;
-}
-
-h4 {
-	font-size: 1.563em;
-}
-
-h5 {
-	font-size: 1.25em;
 }
 
 strong,
@@ -102,7 +93,7 @@ img {
 
 .hogar-corporal {
 	font-family: 'Style Script', cursive;
-	font-size: 4em;
+	margin: 0;
 }
 
 .flex-image {
@@ -114,7 +105,6 @@ img {
 .text-with-image {
 	width: 50%;
 }
-
 
 @media (max-width: 720px) {
 	body {
@@ -128,4 +118,70 @@ img {
 
 .prose p {
 	margin-bottom: 2em;
+}
+
+/* For tablet */
+@media (min-width: 576px) and (max-width: 720px) {
+	main {
+		max-width: calc(100% - 2em);
+	}
+	.hogar-corporal {
+		font-size: 3.5em;
+	}
+
+	h1 {
+		font-size: 2.5em;
+	}
+
+	h2 {
+		font-size: 2.4em;
+	}
+
+	.hamburger {
+    display: none;
+  }
+
+}
+
+/* For laptops and pc */
+@media (min-width: 721px) and (max-width: 992px) {
+	main {
+		max-width: calc(100% - 3em);
+	}
+
+	.hogar-corporal {
+		font-size: 4em;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+}
+
+/* For largte screens */
+@media (min-width: 993px) {
+	main {
+		max-width: calc(100% - 3em);
+	}
+
+	.hogar-corporal {
+		font-size: 7em;
+	}
+
+	h1 {
+		font-size: 4em;
+	}
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
 }
