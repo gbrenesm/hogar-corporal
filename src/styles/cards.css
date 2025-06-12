@@ -19,8 +19,18 @@ img {
   aspect-ratio: 1/1;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 576px) {
   .card {
-    width: 70%;
+    font-size: .9em;
+    width: 30%;
+    height: 90%;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1025px) {
+  .card {
+    height: 100%;
+    font-size: 1.2em;
   }
 }

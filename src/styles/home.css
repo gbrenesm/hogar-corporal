@@ -63,9 +63,15 @@
 	width: 100%;
 }
 
+/* For tablet */
+@media (min-width: 576px) {
+	.home-image p {
+		font-size: 1.2em;
+	}
+}
 
 /* For laptops and pc */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 	.home-image {
 		height: 50%;
 		width: 70%;
@@ -75,32 +81,81 @@
 		}
 	}
 
-	.cards-display {
-		justify-content: space-between;
-		flex-direction: row;
+	.hogar-corporal {
+		font-size: 4em;
 	}
+
+	.cards-display {
+		justify-content: space-around;
+		flex-direction: row;
+		height: 50vh;
+	}
+
+	.circle {
+		width: 450px;
+		height: 450px;
+	}
+
+	.image-in-circle {
+		img {
+			width: 70%;
+			margin-left: 10%;
+		}
+	}
+
 }
 
 /* For largte screens */
 @media (min-width: 1025px) {
+
+	.hogar-corporal {
+		font-size: 4.5em;
+	}
 	.home-image {
 		height: 50%;
-		width: 80%;
+		width: 60%;
 		padding: 4%;
 		p {
-		font-size: 2em;
+		font-size: 1.8em;
 		}
 	}
+
+	.image-in-circle {
+		width: 40%;
+		img {
+			width: 100%;
+			margin-top: 30%;
+		}
+	}
+
+	.circle {
+		width: 350px;
+		height: 350px;
+		left: 70%;
+		top: 30%;
+	}
+
+	.cards-display {
+		height: 65vh;
+	}
+
 }
 
 /* Big screens */
 @media (min-width: 1201px) {
 	.home-image {
-		height: 50%;
-		width: 80%;
+		height: 30%;
+		width: 60%;
 		padding: 4%;
 		p {
-		font-size: 3em;
+		font-size: 2em;
 		}
+	}
+
+	.circle {
+		width: 450px;
+		height: 450px;
+		left: 70%;
+		top: 50%;
 	}
 }
