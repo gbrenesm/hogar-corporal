@@ -2,10 +2,12 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import FlashCard from '../components/FlashCards.astro'
 import '../styles/yoga.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { Picture } from 'astro:assets';
 import yoga from '../assets/yogaSensible.jpg'
+import FlashCards from '../components/FlashCards.astro';
 ---
 
 <!doctype html>
@@ -21,64 +23,103 @@ import yoga from '../assets/yogaSensible.jpg'
 			<div class="flex-image">
 				<div class="text-with-image">
 					<p>
-							¡Es un <b>tratamiento complementario a la psicoterapia</b> basado en el <b>movimiento y el yoga</b>. 
-							A diferencia del yoga tradicional, TCTSY no se centra en alcanzar metas físicas, 
-							se enfoca en <b>crear un espacio seguro</b> donde puedas:
-						</p>
-						<ul>
-							<li>🌱 Reconectar con tu cuerpo</li>
-							<li>🌱 Recuperar el sentido de elección</li>
-							<li>🌱 Cultivar la presencia en el aquí y ahora</li>
-							<li>🌱 Explorar el movimiento de forma segura</li>
-						</ul>
-					</div>
-					<div class="image-principal">
-						<div class="rectangle-green"/>
-						<Picture
-							src={yoga}
-							alt="Dibujo de persona viendo una flor"
-							formats={['avif', 'webp']}
-						/>
-					</div>
+						¡Es un <b>tratamiento complementario a la psicoterapia</b> basado en el <b>movimiento y el yoga</b>. 
+						A diferencia del yoga tradicional, TCTSY no se centra en alcanzar metas físicas, 
+						se enfoca en <b>crear un espacio seguro</b> donde puedas:
+					</p>
+					<ul>
+						<li>🌱 Reconectar con tu cuerpo</li>
+						<li>🌱 Recuperar el sentido de elección</li>
+						<li>🌱 Cultivar la presencia en el aquí y ahora</li>
+						<li>🌱 Explorar el movimiento de forma segura</li>
+					</ul>
 				</div>
-				<p class="background-green">
-					La metodología de TCTSY fue desarrolla por el Trauma Center y cuenta con amplia 
-					evidencia de sus beneficios para los síntomas de trauma emocional.
-				</p>
-				<div class="flex-image">
-					<div class="image-secondary">
-						<div class="rectangle-green-ligth"/>
-						<Picture
+				<div class="image-principal">
+					<div class="rectangle-green"/>
+					<Picture
+						src={yoga}
+						alt="Dibujo de persona viendo una flor"
+						formats={['avif', 'webp']}
+					/>
+				</div>
+			</div>
+			<p class="background-green">
+				La metodología de TCTSY fue desarrolla por el Trauma Center y cuenta con amplia 
+				evidencia de sus beneficios para los síntomas de trauma emocional.
+			</p>
+			<div class="flex-image">
+				<div class="image-secondary">
+					<div class="rectangle-green-ligth"/>
+					<Picture
 						src={yoga}
 						alt="Dibujo de persona abrazándose a sí misma"
 						formats={['avif', 'webp']}
-						/>
-					</div>
-					<div class="text-with-image">
-						<p><b>Beneficios</b> de la práctica de TCTSY:</p>
-						<ul>
-							<li>✔️ Reduce los síntomas del trastorno de estrés postraumático (TEPT) y trauma complejo</li>
-							<li>✔️ Mejora de la regulación emocional</li>
-							<li>✔️ Aumenta la sensación de seguridad y conexión con el propio cuerpo</li>
-							<li>✔️ Potencializa la capacidad para manejar el estrés</li>
-						</ul>
-					</div>
+					/>
 				</div>
-				<div class="background-green">
-					<p><b>TCTSY puede ser para ti si:</b></p>
+				<div class="text-with-image">
+					<p><b>Beneficios</b> de la práctica de TCTSY:</p>
 					<ul>
-							<li>👉🏼 Has experimentado algún trauma o experiencia traumática</li>
-							<li>👉🏼 Has pasado por enfermedades o diagnósticos que te hagan sentir que pierdes control de tu cuerpo</li>
-							<li>👉🏼 Buscas un enfoque terapéutico corporal suave y respetuoso</li>
-							<li>👉🏼 Deseas reconectar con tu cuerpo y recuperar el sentido de control</li>
-						</ul>
+						<li>✔️ Reduce los síntomas del trastorno de estrés postraumático (TEPT) y trauma complejo</li>
+						<li>✔️ Mejora de la regulación emocional</li>
+						<li>✔️ Aumenta la sensación de seguridad y conexión con el propio cuerpo</li>
+						<li>✔️ Potencializa la capacidad para manejar el estrés</li>
+					</ul>
 				</div>
-				<h2>Diferencias a una sesión de yoga regular</h2>
-				<p>
-					La metología de TCTSY permite que las sesiones sean adaptadas a las necesidades de cada persona. 
-					Algunas de las diferencias principales que notarás serán:
-				</p>
-				<h2>Sesiones de TCTSY</h2>
+			</div>
+			<div class="background-green">
+				<p><b>TCTSY puede ser para ti si:</b></p>
+				<ul>
+					<li>👉🏼 Has experimentado algún trauma o experiencia traumática</li>
+					<li>👉🏼 Has pasado por enfermedades o diagnósticos que te hagan sentir que pierdes control de tu cuerpo</li>
+					<li>👉🏼 Buscas un enfoque terapéutico corporal suave y respetuoso</li>
+					<li>👉🏼 Deseas reconectar con tu cuerpo y recuperar el sentido de control</li>
+					</ul>
+			</div>
+			<h2>Diferencias a una sesión de yoga regular</h2>
+			<p>
+				La metología de TCTSY permite que las sesiones sean adaptadas a las necesidades de cada persona. 
+				Algunas de las diferencias principales que notarás serán:
+			</p>
+			<div>
+				<FlashCards
+					title='Lenguaje invitacional y opcional:'
+					content='Todos los movimientos se facilitan como una invitación, tú decides cómo y cuándo mover tu cuerpo.'
+					color=''
+				/>
+				<FlashCards
+					title='Formas accesibles:'
+					content='No es necesario que tu cuerpo se vea o sienta de cierta forma. No se necesita flexibilidad o fuerza, aunque quizá notes beneficios físicos.'
+					color=''
+				/>
+				<FlashCards
+					title='Práctica compartida:'
+					content='Se comparte la experiencia de practicar. Es decir, que como facilitadora estaré también realizando los movimientos, no solo dictándolos.'
+					color=''
+				/>
+				<FlashCards
+					title='Invitación a sentir:'
+					content='Se te invitará a sentir tu cuerpo de forma gradual. Conectando poco a poco con tus sensaciones físicas.'
+					color=''
+				/>
+				<FlashCards
+					title='Indicaciones verbales:'
+					content='Todas las invitaciones son verbales. En ningún momento será necesario que haya contacto físico.'
+					color=''
+				/>
+			</div>
+			<h2>Sesiones de TCTSY</h2>
+			<div>
+				<FlashCards
+					title='Sesiones Grupales'
+					content='Una opción para TCTSY  es integrarse a un grupo. Esta opción puede ser más accesible económicamente.'
+					color=''
+				/>
+				<FlashCards
+					title='Sesiones Individuales'
+					content='Puedes agendar sesiones individuales de TCTSY.'
+					color='Está opción puede tener más flexibilidad de horarios, encontrando un horario que nos acomode a ambas partes.'
+				/>
+			</div>
 		</main>
 		<Footer />
 		<script>
