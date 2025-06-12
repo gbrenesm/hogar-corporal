@@ -21,7 +21,7 @@ body {
 main {
 	max-width: calc(100% - 1em);
 	margin: auto;
-	padding: 2em 4em;
+	padding: 2em 1em;
 }
 
 h1,
@@ -91,24 +91,14 @@ img {
 }
 
 
-@media (max-width: 720px) {
-	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
-	}
-}
-
-
-.prose p {
-	margin-bottom: 2em;
-}
-
 /* For tablet */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) {
+	body {
+		font-size: 19px;
+	}
 	main {
 		max-width: calc(100% - 2em);
+		padding: 2em 2em;
 	}
 	.hogar-corporal {
 		font-size: 3.5em;
@@ -125,43 +115,43 @@ img {
 
 /* For laptops and pc */
 @media (min-width: 769px) {
+	body {
+		font-size: 21px;
+	}
 	main {
 		max-width: calc(100% - 3em);
 	}
 
-	.hogar-corporal {
-		font-size: 4em;
+	h1 {
+		font-size: 3em;
+	}
+}
+
+/* For larger screens */
+@media (min-width: 1025px) {
+	body {
+		font-size: 23px;
+	}
+	main {
+		max-width: calc(100% - 3em);
 	}
 
 	h1 {
 		font-size: 3em;
 	}
 
-	.flex-image {
-		flex-direction: row;
-	}
-
 	.text-with-image {
 		width: 50%;
 	}
-}
 
-/* For larger screens */
-@media (min-width: 1025px) {
-	main {
-		max-width: calc(100% - 3em);
-	}
-
-	.hogar-corporal {
-		font-size: 7em;
-	}
-
-	h1 {
-		font-size: 4em;
+	.flex-image {
+		flex-direction: row;
 	}
 }
 
 /* Big screens */
 @media (min-width: 1201px) {
-	
+	body {
+		font-size: 24px;
+	}
 }
