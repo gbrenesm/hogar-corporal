@@ -49,7 +49,6 @@ nav a.active {
 
 .ho-menu {
   font-size: 30px !important;
-  font-family: 'Style Script', cursive;
 }
 
 .conectemos {
@@ -71,7 +70,7 @@ nav a.active {
   }
 
   .nav-links a {
-    font-size: 1em;
+    font-size: .8em;
   }
 
   .hamburger {
@@ -87,7 +86,9 @@ nav a.active {
 /* Big screens */
 @media (min-width: 1201px) {
   .nav-links a {
-    font-size: 1.3em;
+    font-size: 1em;
   }
-
+  .ho-menu {
+    font-size: 1.5em !important;
+  }
 }

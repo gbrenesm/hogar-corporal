@@ -1,33 +1,36 @@
+.flex-1 {
+  flex-direction: column;
+}
+
 
 /* Style for first image in page */
 .image-principal {
   position: relative;
-	width: 45%;
+  margin-top: 4%;
   
   .rectangle-green {
     position: absolute;
     background-color: var(--green);
-    width: 60%;
-    height: 75%;
-    border-radius: 30px;
-    top: 25%;
+    width: 50%;
+    height: 80%;
+    border-radius: var(--radius);
+    top: 10%;
     left: 30%;
+    z-index: -1;
+  }
+  
+  img {
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 0 20%;
   }
 
-	img {
-    position: absolute;
-    width: 60%;
-    height: auto;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-	}
 }
 
 /* Style for second image in page */
 .image-secondary {
-  width: 50%;
   position: relative;
   
   .rectangle-orange {
@@ -38,13 +41,63 @@
     border-radius: 30px;
     top: 10%;
     right: 30%;
+    z-index: -1;
   }
 
   img {
-    width: 65%;
+    width: 60%;
     height: auto;
-    position: absolute;
-    top: 20%;
-    left: 20%;
+    margin: 0 20%;
+  }
+}
+
+
+/* For larger screens */
+@media (min-width: 1025px) {
+  .flex-1 {
+    flex-direction: row;
+  }
+
+  .image-principal {
+    width: 40%;
+    margin-top: 15%;
+    img {
+      position: relative;
+      width: 90%;
+      height: 60%;
+    }
+    .rectangle-green {
+      height: 60%;
+      width: 90%;
+    }
+  }
+
+
+  .image-secondary {
+    width: 50%;
+    img {
+      width: 80%;
+      margin: 0;
+    }
+    .rectangle-orange {
+      width: 80%;
+      height: 60%;
+      right: 10%;
+    }
+  }
+}
+
+/* Big screens */
+@media (min-width: 1201px) {
+  .image-principal {
+    width: 40%;
+    margin-top: 15%;
+    img {
+      position: relative;
+      height: 90%;
+    }
+    .rectangle-green {
+      height: 90%;
+    }
   }
 }
