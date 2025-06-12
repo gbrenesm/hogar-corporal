@@ -1,0 +1,10 @@
+.flash-card {
+  background-color: var(--green);
+  color: var(--cream);
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+}
+.card-title {
+  text-align: center;
+}
