@@ -1,4 +1,5 @@
 ---
+import '../styles/flash-cards.css'
 interface Props {
   title: string;
   content: string;
@@ -8,7 +9,7 @@ interface Props {
 const { title, content, color } = Astro.props
 ---
 
-<div>
+<div class="flash-card">
   <p class="card-title">{title}</p>
   <p class="card-content">{content}</p>
 </div>
