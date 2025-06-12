@@ -1,6 +1,7 @@
 ---
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
+import '../styles/cards.css'
 
 interface Props {
   title: string;
@@ -13,28 +14,7 @@ const { title, imagePath, subtitle, altText, link } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
-<style>
-.card {
-  background-color: var(--green-light);
-  width: 30%;
-  border-radius: 50px;
-  color: var(--cream);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1em;
-  padding: 1%;
-}
 
-img {
-  border-radius: 50%;
-  max-width: 90%;
-  height: auto;
-  margin: 0 5%;
-  aspect-ratio: 1/1;
-}
-</style>
 <a href={link} class="card">
   <p>{title}</p>
   <Image src={images[imagePath]()} alt={altText} />
