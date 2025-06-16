@@ -19,9 +19,10 @@ header {
   color: var(--cream);
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-links a:hover {
   background-color: var(--orange);
+  border-radius: var(--radius);
+  padding: 5px;
 }
 
 .expanded {

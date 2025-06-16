@@ -155,3 +155,28 @@ img {
 		font-size: 24px;
 	}
 }
+
+@media screen and (min-width: 1400px) {
+  main {
+    max-width: calc(100% - 3em);
+  }
+	body {
+		font-size: 26px;
+	}
+}
+@media screen and (min-width: 1600px) {
+  main {
+    max-width: 80%;
+  }
+	body {
+		font-size: 28px;
+	}
+}
+@media screen and (min-width: 1900px) {
+  main {
+    max-width: 70%;
+  }
+	body {
+		font-size: 30px;
+	}
+}
