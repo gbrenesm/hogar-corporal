@@ -53,27 +53,22 @@ ul > li {
   padding: 1em;
   color: var(--cream);
   border-radius: 30px;
-  text-align: center;
-
-  p {
-    text-align: center;
-  }
 }
 
 /* For larger screens */
 @media (min-width: 1025px) {
   .image-principal {  
-  width: 50%;
-  .rectangle-green {
-    height: 80%;
-    width: 70%;
-    right: 0;
-  }
+    width: 50%;
+    .rectangle-green {
+      height: 80%;
+      width: 70%;
+      right: 0;
+    }
 
-  img {
-    width: 70%;
-  }
-  }
+    img {
+      width: 70%;
+    }
+    }
 
   .image-secondary {
     width: 50%;
