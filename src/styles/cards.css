@@ -9,15 +9,15 @@
   font-size: 1em;
   padding: 1%;
   margin: 2.5%;
+  img {
+    border-radius: 50%;
+    max-width: 90%;
+    height: auto;
+    margin: 0 5%;
+    aspect-ratio: 1/1;
+  }
 }
 
-img {
-  border-radius: 50%;
-  max-width: 90%;
-  height: auto;
-  margin: 0 5%;
-  aspect-ratio: 1/1;
-}
 
 @media (min-width: 576px) {
   .card {
