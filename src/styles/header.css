@@ -33,6 +33,7 @@ header {
 .hamburger {
   padding: 20px 0 0 0;
   cursor: pointer;
+  display: flex;
 }
 
 .hamburger .line {
@@ -49,7 +50,7 @@ nav a.active {
 }
 
 .ho-menu {
-  font-size: 30px !important;
+  display: none !important;
 }
 
 .conectemos {
@@ -59,6 +60,19 @@ nav a.active {
   margin: 0 30px;
 }
 
+.ho-hamburger {
+  color: var(--cream);
+  margin-left: 25%;
+  font-size: 30px !important;
+}
+
+
+@media (min-width: 769px) {
+  .ho-hamburger {
+    font-size: 1.7em !important;
+      margin-left: 30%;
+  }
+}
 
 /* Size grater than a tablet */
 @media (min-width: 1024px) {
@@ -82,6 +96,11 @@ nav a.active {
     margin: 0;
     padding: 5px 15px !important;
   }
+
+  .ho-menu {
+    display: block !important;
+    font-size: 30px !important;
+}
 }
 
 /* Big screens */
