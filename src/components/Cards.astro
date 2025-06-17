@@ -14,9 +14,10 @@ const { title, imagePath, subtitle, altText, link } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}');
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
 ---
-
-<a href={link} class="card">
-  <p>{title}</p>
-  <Image src={images[imagePath]()} alt={altText} />
-  <p>{subtitle}</p>
-</a>
+<div class="card">
+  <a href={link}>
+    <p>{title}</p>
+    <Image src={images[imagePath]()} alt={altText} />
+    <p>{subtitle}</p>
+  </a>
+</div>
