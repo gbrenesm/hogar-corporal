@@ -1,0 +1,69 @@
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  id="form"
+  class="needs-validation"
+  data-astro-reload
+  novalidate>
+    <input type="hidden" name="access_key" value="365ea1cb-cbb6-4963-9012-23c5999ebee6" />
+    <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
+      <div class="input-div">
+        <label for="name">Nombre</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Nombre"
+          required
+          name="name"
+        />
+      </div>
+      <div class="input-div">
+        <label for="email_address">Correo</label>
+        <input
+          id="email_address"
+          type="email"
+          placeholder="email@ejemplo.com"
+          name="email"
+          required
+        />
+        <div class="empty-feedback text-red-400 text-sm mt-1">
+          Por favor comparte tu correo para que me pueda poner en contacto contigo.
+        </div>
+        <div class="invalid-feedback text-red-400 text-sm mt-1">
+          Parece que tu correo no es válido.
+        </div>
+      </div>
+      <div>
+        <label for="message">Comparte un mensaje</label>
+        <textarea
+          name="message"
+          id="message"
+          required
+          placeholder="Puedes compartir un mensaje o pregunta"
+        />
+      </div>
+      <div class="button-div">
+        <button type="submit">Enviar</button>
+      </div>
+      <div id="result"></div>
+</form>
+
+    <style>
+      .invalid-feedback,
+      .empty-feedback {
+        display: none;
+      }
+
+      .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+        display: block;
+      }
+
+      .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+        display: block;
+      }
+
+      .is-invalid,
+      .was-validated :invalid {
+        border-color: #dc3545;
+      }
+    </style>
