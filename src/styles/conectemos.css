@@ -1,0 +1,45 @@
+.orange-rectangle {
+  background-color: var(--orange);
+  border-radius: var(--radius);
+  padding: 5%;
+}
+
+form {
+  margin-top: 5%;
+  background-color: var(--green-light);
+  color: var(--cream);
+  border-radius: var(--radius);
+  padding: 5%;
+  height: 130%;
+  
+  input, 
+  textarea {
+    border-radius: var(--radius);
+    border: none;
+    padding: 4%;
+    margin-bottom: 3%;
+    width: 90%;
+  }
+
+  button {
+    background-color: var(--orange);
+    color: var(--cream);
+    border-radius: var(--radius);
+    border-color: var(--orange);
+    padding: 5%;
+    width: 70%;
+  }
+
+  .input-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin: 2% 0;
+  }
+
+  .button-div {
+    text-align: center;
+  }
+}

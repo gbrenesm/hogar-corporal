@@ -1,0 +1,40 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Form from '../components/Form.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/conectemos.css'
+---
+
+<!doctyp" html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+    <Header/>
+    <main>
+      <h1>Conectemos</h1>
+      <div>
+        <p>
+          Me encuentro en la CDMX. Si te interesan sesiones presenciales de psicoterapia, 
+          mi consultorio está en la zona de San Ángel.
+        </p>
+        <p>Igualmente imparto sesiones de forma remota, a través de Google Meet.</p>
+        <div class="orange-rectangle">
+          <p><strong>También puedes contactarme por estos medios:</strong></p>
+          <p>+52 55 12 34 97 68</p>
+          <p>lbrenesmesa@gmail.com</p>
+          <p>leob_yogi</p>
+        </div>
+      </div>
+      <Form/>
+    <script>
+      import '../scripts/form.js';
+      import "../scripts/menu.js";
+    </script>
+    </main>
+    <Footer/>
+  </body>
+</html>
