@@ -1,7 +1,11 @@
 header {
 	margin: 0;
-	padding: 0 2em 1em 2em;
 	background: var(--green);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
 }
 	
 .nav-links {
@@ -31,7 +35,7 @@ header {
 
 /* Hamburger menu in celphone */
 .hamburger {
-  padding: 20px 0 0 0;
+  padding: 20px 20px 5px 20px;
   cursor: pointer;
   display: flex;
 }
@@ -77,16 +81,18 @@ nav a.active {
 
 /* Size grater than a tablet */
 @media (min-width: 1024px) {
+
   .nav-links {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: .5em;
   }
 
   .nav-links a {
     font-size: .8em;
+    margin-left: 0;
   }
 
   .hamburger {
@@ -101,7 +107,7 @@ nav a.active {
   .ho-menu {
     display: block !important;
     font-size: 30px !important;
-}
+  }
 }
 
 /* Big screens */
