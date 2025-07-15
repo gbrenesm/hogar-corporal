@@ -15,6 +15,7 @@
     "@fontsource/montserrat-alternates": "^5.2.5",
     "@fontsource/style-script": "^5.2.5",
     "@fontsource/sue-ellen-francisco": "^5.2.5",
-    "astro": "^5.8.1"
+    "astro": "^5.8.1",
+    "quill": "^2.0.3"
   }
 }
